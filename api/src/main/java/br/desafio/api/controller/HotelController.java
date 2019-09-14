@@ -23,6 +23,7 @@ public class HotelController {
 	
 	@PostMapping("/hotel")
 	private ResponseEntity<String> cadastrarUsuario(@RequestBody Hotel hotel ){
+		
 		if (service.createHotel(hotel) != null) { 
 			return new ResponseEntity<String>("",HttpStatus.CREATED);
 		}
